@@ -1,0 +1,17 @@
+option java_package = "gr.uoa.di.dsg.ic.experiments";
+option java_outer_classname = "ExperimentMessages";
+
+message ExperimentInformation {
+    required int32 warmupRounds = 1;
+    required string outputDirectory = 2;
+}
+
+message ExperimentInformationReceived {}
+message ExperimentComplete {}
+message ExperimentTermination{}
+
+message ExperimentStart {
+	required bool inWarmupPhase = 1;
+	required int32 operationsInEachExecution = 2;
+    required int64 rendezvousTime = 3;
+}

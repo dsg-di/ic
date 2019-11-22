@@ -1,0 +1,8 @@
+option java_package = "gr.uoa.di.dsg.ic.bracha";
+option java_outer_classname = "ICDatumMessage";
+
+message ICChunk {
+	required int32 chunkId = 1;
+	required string appID = 2;
+	required bytes chunkData = 3;
+}

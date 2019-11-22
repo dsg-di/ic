@@ -1,0 +1,16 @@
+option java_package = "gr.uoa.di.dsg.ic.lamport";
+option java_outer_classname = "InteractiveConsistencyMessage";
+
+message ICInit {
+	required int32 icid = 2;
+	required int32 round = 3;
+	required int32 pid = 4;
+	required string value = 5;
+}
+
+message ICVector {
+	required int32 icid = 2;
+	required int32 round = 3;
+	required int32 pid = 4;
+	repeated string values = 5;
+}

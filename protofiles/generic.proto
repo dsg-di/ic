@@ -1,0 +1,26 @@
+option java_package = "gr.uoa.di.dsg.communication";
+option java_outer_classname = "BrachaBroadcastMessage";
+
+message InitMessage{
+	required int32 bid = 1;
+	required int32 cid = 2;
+	required int32 pid = 3;
+	required int32 icid = 4;
+	required string value = 5;
+}
+
+message EchoMessage{
+	required int32 bid = 1;
+	required int32 cid = 2;
+	required int32 pid = 3;
+	required int32 icid = 4;
+	required string value = 5;
+}
+
+message ReadyMessage{
+	required int32 bid = 1;
+	required int32 cid = 2;
+	required int32 pid = 3;
+	required int32 icid = 4;
+	required string value = 5;
+}

@@ -1,0 +1,36 @@
+option java_package = "gr.uoa.di.dsg.broadcast.consistent";
+option java_outer_classname = "ConsistentBroadcastMessage";
+
+message CBandRBSSend {
+	required int32 bid = 2;
+	required int32 cid = 3;
+	required int32 pid = 4;
+	required string icid = 5;
+	required string value = 6;
+}
+
+message CBandRBSEcho {
+	required int32 bid = 2;
+	required int32 cid = 3;
+	required int32 pid = 4;
+	required string icid = 5;
+	required string value = 6;
+	required bytes signature = 7;
+}
+
+message CBandRBSFinal {
+	required int32 bid = 2;
+	required int32 cid = 3;
+	required int32 pid = 4;
+	required string icid = 5;
+	required string value = 6;
+
+	message OwnerAndSignatureTuple {
+		required int32 owner = 1;
+		required bytes signature = 2;
+	}
+
+	repeated OwnerAndSignatureTuple signature = 7;
+}
+
+

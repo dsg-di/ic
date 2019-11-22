@@ -1,0 +1,10 @@
+option java_package = "gr.uoa.di.dsg.ic.torrent";
+option java_outer_classname = "ICTorrentDataMessage";
+
+message ICTorrent {
+	required string appID = 1;
+	required string crawlSite = 2;
+	required string crawlDate= 3;
+	required bytes torrentFile = 4;
+
+	}

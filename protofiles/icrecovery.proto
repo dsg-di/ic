@@ -1,0 +1,27 @@
+option java_package = "gr.uoa.di.dsg.ic.recovery";
+option java_outer_classname = "RecoveryMessages";
+
+message OwnerAndSignatureTuple {
+	required int32 owner = 1;
+	required bytes signature = 2;
+}
+
+message RecoveryRequest {
+	required string icid = 1;
+	required int32 cid = 2;
+}
+
+message RecoveryResponse {
+	required string icid = 1;
+	required int32 cid = 2;
+	required string value = 3;
+	repeated OwnerAndSignatureTuple signature = 4;
+}
+
+message ICChunkRecovery {
+	required string appID = 1;
+	required int32 cid = 2;
+	required int32 chunkId = 3;
+	required bytes chunkData = 4;
+	repeated OwnerAndSignatureTuple signature = 5;
+}

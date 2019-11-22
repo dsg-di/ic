@@ -1,0 +1,27 @@
+option java_package = "gr.uoa.di.dsg.consensus.multivalued.messages";
+option java_outer_classname = "MultiValueConsensusMessage";
+
+message MVInitial {
+	required int32 bid = 2;
+	required int32 cid = 3;
+	required int32 pid = 4;
+	required int32 icid = 5;
+	required string value = 6;
+}
+
+message MVInit {
+	required int32 bid = 2;
+	required int32 cid = 3;
+	required int32 pid = 4;
+	required int32 icid = 5;
+	required string value = 6;
+}
+
+message MVVector {
+	required int32 bid = 2;
+	required int32 cid = 3;
+	required int32 pid = 4;
+	required int32 icid = 5;
+	required string value = 6;
+	repeated string initValues = 7;
+}
